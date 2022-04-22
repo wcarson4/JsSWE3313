@@ -1,0 +1,66 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWindowsForms>true</UseWindowsForms>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <StartupObject>SWE3313_JsRestaurant.Program</StartupObject>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Core\" />
+      <Folder Include="Data\DataAccess" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="App\MainForm.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="App\Shared\SideNav.cs" />
+      <Compile Update="App\Shared\LoginScreen.cs">
+        <SubType>Component</SubType>
+      </Compile>
+      <Compile Update="App\Admin\DashBoard.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="App\Admin\Inventory.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="App\Admin\Reports.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="App\Admin\ProfileManagement.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="App\Dining\TableStatus.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="App\Dining\Menu.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="App\Dining\CustomerOrders.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="App\Kitchen\OrderQueue.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="App\Shared\TimeClock.cs">
+        <SubType>Component</SubType>
+      </Compile>
+      <Compile Update="Properties\Resources.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Resources.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="Properties\Resources.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+</Project>
